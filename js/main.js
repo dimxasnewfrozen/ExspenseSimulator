@@ -12,7 +12,6 @@ Number.prototype.formatMoney = function(decPlaces, thouSeparator, decSeparator) 
 
 $(document).ready(function () {
 
-
 	/***************************************************************/
 	// Main template that shows the expenses in a list
 	var templateSource     = $("#results-template").html();
@@ -73,8 +72,16 @@ $(document).ready(function () {
     		data 		 = JSON.parse(localStorage.getItem("expense_data"));
     		total_income = (localStorage.getItem("total_income") != null) ? localStorage.getItem("total_income") : 0;
     		total_income = parseFloat(total_income);
+    		$('#initialModal').modal({show:false});
     	}
-	} 
+    	else {
+    		$('#initialModal').modal({show:true});
+    	}
+	}
+	else
+	{
+		$('#initialModal').modal({show:true});
+	}
 
 	// the initial display of data
 	displayData();

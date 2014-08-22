@@ -10,37 +10,9 @@
         <meta name="description" content="A simple personal finance simulator to handle your 'what if' moments.">
         <meta name="viewport" content="width=device-width">
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400' rel='stylesheet' type='text/css'>
-        
-        <style>
-            html,body { 
-              background: url(images/bg.jpg) no-repeat center center fixed; 
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              -o-background-size: cover;
-              background-size: cover;
-            }
-
-            .expense_disabled  
-            {
-                text-decoration: line-through;
-            }
-
-            .header_text
-            {
-                font-family: 'Roboto Condensed', sans-serif;
-                color:black;
-                font-style: italic;
-                font-size:55px;
-            }
-
-            .sample_image
-            {
-                display:none;
-            }
-
-        </style>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
 
     </head>
     <body>
@@ -213,6 +185,31 @@
         </div>
 
 
+
+        <div class="modal fade"  id="initialModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title">Welcome!</h4>
+            </div>
+            <div class="modal-body">
+              <p>Thanks for checking out my app.</p>
+
+              <ul>
+                <li>To get started <b>feel free to remove all of the demo content</b> and enter your own income/expenses.</li>
+                <li>You can disable expenses, change expense amounts, change your income, add and remove expenses to <b>analyze different financial scenarios</b>.</li>
+                <li>All data is <b>saved locally</b> within your browser. No data is being sent over the internet or saved in a database.</li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+
         <!-- The right sidebar template -->
         <script id="right-template" type="text/x-handlebars-template">
 
@@ -317,11 +314,11 @@
         </script>
 
         <!-- include dependencies -->
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+        <script src="js/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/jquery-migrate-1.2.1.min.js"><\/script>')</script>
         <script src="js/handlebars.js"></script>
         <script src="js/main.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         
         <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
